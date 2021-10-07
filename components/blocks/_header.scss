@@ -1,0 +1,109 @@
+header{
+    width: 100%;
+    display: flex;
+    height: auto;
+    position: relative;
+
+    .header-wrapper{
+        width: 100%;
+        display: flex;
+        height: auto;
+        justify-content: space-between;
+
+        .header-title{
+            width: 100%;
+            display: flex;
+            height:auto;
+            align-items: center;
+            padding-left: 0.5em;
+
+            @media screen and (max-width: 499px) {
+                display: inline-block;
+                text-align: center;
+            }
+
+            .header-title-img{
+               width: 150px;
+                height: auto;
+                margin-top: 0.5em;
+                background-color: #fff;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .header-title-text{
+                width: 100%;
+                height: auto;
+                margin-top: 0.5em;
+                
+                span{
+                    margin-left: 1.3em;
+                    text-transform: capitalize;
+                    font-size: 1.1em;
+                }
+            }
+        }
+
+        .header-navbar{
+            width: 100%;
+            display: flex;
+            list-style: none;
+            height: auto;
+            align-items: center;
+            text-align: center;
+            justify-content: flex-end;
+
+            @media screen and (max-width: 1039px) {
+                display: none;
+            }
+
+            li{
+                // margin-left: 0.5em;
+
+                i{
+                    margin-left: 0.4em;
+                }
+
+                &:hover{
+
+                    a{
+                        background-color: $color-hover-bg;
+                        color: $color-a-hover;
+                    }
+
+                    .active{
+
+                        i{
+                            color: $color-a-hover;
+                        }
+                    }
+                }
+
+                a{
+                    text-decoration: none;
+                    color: $color-font;
+                    text-transform: capitalize;
+                    line-height: 65px;
+                    font-size: 17px;
+                    display: inline-block;
+                    padding: 0 25px 0px 25px;
+                    font-weight: 700;
+                    transition: all 0.3s;
+                }
+
+                .active{
+                    background-color: #3f98a0;
+                    color: #fff;
+
+                    i{
+                        color: #fff;
+                        transition: all 0.3s;
+                    }
+                }
+            }
+        }
+    }
+}

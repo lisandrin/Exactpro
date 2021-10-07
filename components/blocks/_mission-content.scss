@@ -1,0 +1,113 @@
+.mission-content{
+    width: 100%;
+    height: auto;
+    display: flex;
+
+    .mission-content-wrapper{
+        width: 100%;
+        height: auto;
+        display: block;
+        padding-top: 1em;
+
+        .mission-head-row{
+            width: 100%;
+            display: flex;
+            list-style: none;
+            margin-top: 1em;
+            align-items: center;
+
+            i{
+                color: rgb(194, 194, 194);
+                font-size: 0.8em;
+                margin-left: 0.8em;
+            }
+
+            li{
+                margin-left: 16px;
+
+                a{
+                    color: #212C42;
+                    text-decoration: none;
+                }
+
+                .active{
+                    color: #b4a7a1;
+                }
+            }
+        }
+
+        .mission-text-image{
+            width: 100%;
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            height: auto;
+            margin-top: 2em;
+            margin-bottom: 2em;
+
+            @media screen and (max-width: 881px) {
+                grid-template-columns: 1fr;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .mission-text{
+                width: 100%;
+                display: inline-block;
+                height: auto;
+
+                .head-text{
+                    display: inline-block;
+
+                    h2{
+                        @include h2();
+                        text-transform: capitalize;
+                        
+                        &::after{
+                            position: absolute;
+                            bottom: -10px;
+                            left: 0;
+                            width: 100px;
+                            height: 1.8px;
+                            content: '';
+                            background: #3f979f;
+                        }
+                    }
+                }
+
+                .p-wrapper{
+                    width: 100%;
+                    display: inline-block;
+                    padding-right: 1em;
+
+                    p{
+                        margin-bottom: 20px;
+                        letter-spacing: 1px;
+                        line-height: 25px;
+                        font-weight: 600;
+                        font-size: 1.1em;
+                        color: #333;
+                    }
+                }
+            }
+
+            .mission-image{
+                width: 100%;
+                display: inline-block;
+
+                @media screen and (max-width: 881px) {
+                    padding: 1.1em;
+                }
+                
+                img{
+                    height: auto;
+                    display: block;
+                    max-width: 100%;
+                    background-repeat: no-repeat;
+                    aspect-ratio: auto 720 / 480;
+                    background-size: contain;
+                }
+            }
+        }
+    }
+}

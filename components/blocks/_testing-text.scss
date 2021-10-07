@@ -1,0 +1,50 @@
+.testing-content{
+    width: 100%;
+    display: flex;
+    height: auto;
+
+    .testing-wrapper{
+        width: 100%;
+        height: auto;
+        display: inline-block;
+        padding: 1em;
+
+        .head-text{
+            display: inline-block;
+            margin-bottom: 2em;
+            margin-top: 2em;
+
+            h2{
+                color: #333;
+                font-size: 33px;
+                line-height: 41px;
+                position: relative;
+                
+                &::after{
+                    position: absolute;
+                    bottom: -5px;
+                    left: 0;
+                    width: 100px;
+                    height: 1.8px;
+                    content: '';
+                    background: #3f979f;
+                }
+            }
+        }
+
+        .p-wrapper{
+            width: 100%;
+            display: inline-block;
+            margin-bottom: 1em;
+
+            p{
+                margin-bottom: 20px;
+                letter-spacing: 1px;
+                line-height: 26px;
+                font-size: 1.1em;
+                font-weight: 300;
+                color: #333;
+            }
+        }
+    }
+}

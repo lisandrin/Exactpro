@@ -1,0 +1,87 @@
+@import './layout.scss';
+@import './common/mixins';
+@import './components/blocks.scss'; 
+
+.sideMenu{
+    position: fixed;
+    z-index: 111;
+    top: 0;
+    right: 0;
+    width: 30%;
+    height: 100%;
+    padding: 15px;
+    background-color: #1E2736;
+    transform: translateX(+100%);
+    transition: transform 0.5s;
+    padding-top: 10px;
+
+    @media screen and (max-width: 691px) {
+        width: 100%;
+    }
+
+    .closebtn{
+        color: #fff;
+        font-size: 3em;
+        text-decoration: none;
+        transition: all 0.3s;
+
+        &:hover{
+            color: $color-a-hover;
+        }
+    }
+
+    ul{
+        margin-top: 0.5em;
+
+        li {
+            list-style-type: none;
+            padding: 1em;
+            border-bottom: 1px solid gray;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.3s;
+            color: #fff;
+
+            i{
+                width: 25px;
+                height: 20px;
+            }
+    
+            &:hover{
+                color: $color-a-hover;
+                padding-left: 2em;
+
+                a{
+                    color: $color-a-hover;
+                }
+            
+            }
+    
+            a{
+                line-height: 25px;
+                // margin-left: 1em;
+                font-size: 1.1em;
+                text-decoration: none;
+                font-family: 'Open Sans';
+                color:#fff;
+                padding-top: 40px;
+                transition: all 0.3s;
+                text-transform: capitalize;
+            }
+        }
+    }
+}
+
+.closeButton{
+    display: none;
+    position: absolute;
+    right: 2em;
+    top: 1em;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+
+    @media screen and (max-width: 1039px) {
+        display: inline-block;
+    }
+}
